@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      box-sizing: border-box;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .face {
+      width: 300px;
+      height: 300px;
+      background: #000;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .face::after {
+      content: "";
+      background-color: #fff;
+      width: 120px;
+      height: 85px;
+      border-radius: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+
+    .mouse,
+    .ears,
+    .eyes,
+    .cheek,
+    .chest {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .mouse::before {
+      content: "";
+      background: #000;
+      width: 25px;
+      height: 18px;
+      border-radius: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 42%;
+      left: 50%;
+      z-index: 1;
+    }
+
+    .mouse::after {
+      content: "";
+      background: #000;
+      width: 70px;
+      height: 25px;
+      border-radius: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 55%;
+      left: 50%;
+      z-index: 1;
+    }
+
+    .ears::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      background: #fff;
+      border: 8px solid #000;
+      border-radius: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 10%;
+      left: 20%;
+    }
+
+    .ears::after {
+      content: "";
+      width: 30px;
+      height: 30px;
+      background: #fff;
+      border: 8px solid #000;
+      border-radius: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 10%;
+      left: 80%;
+    }
+
+
+    .eyes::before {
+      content: "";
+      width: 35px;
+      height: 35px;
+      background: #000;
+      border: 8px solid #fff;
+      border-radius: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 30%;
+      left: 30%;
+    }
+
+    .eyes::after {
+      content: "";
+      width: 35px;
+      height: 35px;
+      background: #000;
+      border: 8px solid #fff;
+      border-radius: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 30%;
+      left: 70%;
+    }
+
+    .cheek::before {
+      content: "";
+      width: 70px;
+      height: 70px;
+      background-color: rgb(254, 0, 0);
+      border-radius: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 8%;
+    }
+
+    .cheek::after {
+      content: "";
+      width: 70px;
+      height: 70px;
+      background-color: rgb(254, 0, 0);
+      border-radius: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 92%;
+    }
+
+    .chest::before {
+      content: "";
+      width: 32px;
+      height: 40px;
+      background-color: #fff;
+      transform: skew(45deg, 0) translate(-50%, -50%);
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+    }
+
+    .chest::after {
+      content: "";
+      width: 32px;
+      height: 40px;
+      background-color: #fff;
+      position: absolute;
+      transform: skew(-45deg, 0) translate(-50%, -50%);
+      bottom: 5%;
+      left: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="face">
+      <div class="mouse"></div>
+      <div class="ears"></div>
+      <div class="eyes"></div>
+      <div class="cheek"></div>
+      <div class="chest"></div>
+
+    </div>
+  </div>
+</body>
+
+</html>
